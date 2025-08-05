@@ -17,7 +17,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # === 1. Load Data ===
-df = pd.read_csv('D:/Final Year Project/Independent_expanded_with_Actual_Bandgap.csv')
+df = pd.read_csv('D:/Final Year Project/Independent_expanded.csv')
 X = df[['MA', 'FA', 'Cs', 'Cl', 'Br', 'I', 'Pb', 'Sn']].values
 y = df['Bandgap'].values
 feature_names = ['MA', 'FA', 'Cs', 'Cl', 'Br', 'I', 'Pb', 'Sn']
@@ -155,3 +155,4 @@ for i in range(3):
 plt.tight_layout()
 plt.savefig("SHAP_Blended_Stacked_LR_RF.tiff", format='tiff', dpi=1200)
 plt.show()
+

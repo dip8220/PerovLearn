@@ -18,7 +18,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # === Load Dataset ===
-data = pd.read_csv('D:/Final Year Project/Independent_expanded_with_Actual_Bandgap.csv')
+data = pd.read_csv('D:/Final Year Project/Independent_expanded.csv')
 X = data[['MA', 'FA', 'Cs', 'Cl', 'Br', 'I', 'Pb', 'Sn']]
 y = data['Bandgap']
 
@@ -151,3 +151,4 @@ sns.heatmap(performance_df, annot=True, fmt='.6f', cmap='YlOrBr', linewidths=0.5
 plt.title('Performance Comparison: KNN, Bagging, Stacked Models')
 plt.savefig('KNN_Bagging_Stacked_Heatmap.tiff', dpi=1200, format='tiff')
 plt.show()
+

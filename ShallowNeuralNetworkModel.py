@@ -10,7 +10,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
 # Load dataset
-data = pd.read_csv('D:/Final Year Project/Independent_expanded_with_Actual_Bandgap.csv')
+data = pd.read_csv('D:/Final Year Project/Independent_expanded.csv')
 X = data[['MA', 'FA', 'Cs', 'Cl', 'Br', 'I', 'Pb', 'Sn']]
 y = data['Bandgap']
 
@@ -134,3 +134,4 @@ plt.title('Shallow Neural Network Model Performance')
 # Save heatmap
 plt.savefig('Shallow_Neural_Networks_Heatmap.tiff', format='tiff', dpi=1200)
 plt.show()
+

@@ -17,7 +17,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # === Load Dataset ===
-data = pd.read_csv('D:/Final Year Project/Independent_expanded_with_Actual_Bandgap.csv')
+data = pd.read_csv('D:/Final Year Project/Independent_expanded.csv')
 X = data[['MA', 'FA', 'Cs', 'Cl', 'Br', 'I', 'Pb', 'Sn']]
 y = data['Bandgap']
 
@@ -160,3 +160,4 @@ sns.heatmap(performance_df, annot=True, cmap='YlOrBr', fmt='.6f', linewidth=.5, 
 plt.title('Model Performance Comparison')
 plt.savefig('Merged_Ensemble_Comparison_Heatmap.tiff', format='tiff', dpi=1200)
 plt.show()
+

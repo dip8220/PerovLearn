@@ -18,7 +18,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # === 1. Load Dataset ===
-df = pd.read_csv('D:/Final Year Project/Independent_expanded_with_Actual_Bandgap.csv')
+df = pd.read_csv('D:/Final Year Project/Independent_expanded.csv')
 X = df[['MA', 'FA', 'Cs', 'Cl', 'Br', 'I', 'Pb', 'Sn']].values
 y = df['Bandgap'].values
 feature_names = ['MA', 'FA', 'Cs', 'Cl', 'Br', 'I', 'Pb', 'Sn']
@@ -114,3 +114,4 @@ for i, (name, explainer) in enumerate(explainer_dict.items()):
 plt.tight_layout()
 plt.savefig("All_SHAP_Subplots.tiff", format='tiff', dpi=1200)
 plt.show()
+

@@ -13,7 +13,7 @@ from tensorflow.keras.layers import Dense, Input, Layer
 from tensorflow.keras import backend as K
 
 # Load dataset
-data = pd.read_csv(r'D:\Final Year Project\Independent_expanded_with_Actual_Bandgap.csv')
+data = pd.read_csv(r'D:\Final Year Project\Independent_expanded.csv')
 X = data[['MA', 'FA', 'Cs', 'Cl', 'Br', 'I', 'Pb', 'Sn']]
 y = data['Bandgap']
 
@@ -138,3 +138,4 @@ plt.title('Instance-Based Models Performance Heatmap')
 plt.tight_layout()
 plt.savefig('instance_models_performance_heatmap.tiff', format='tiff', dpi=1200)
 plt.show()
+
